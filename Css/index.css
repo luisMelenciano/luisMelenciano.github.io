@@ -619,6 +619,16 @@ h3{
     height: 280px;
     overflow: hidden;
 }
+
+.hover--galery
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
+
   
 }
 
@@ -667,6 +677,15 @@ h3{
 {
 
     font-size: 18px;
+}
+
+.hover--galery
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
 }
 
 }

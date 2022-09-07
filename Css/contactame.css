@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@200;300;500;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+body
+{
+    font-family: 'Oxygen', sans-serif;
+    background-image: linear-gradient(135deg, #eaecf36c 0%, rgba(255, 255, 255, 0.61) 100%),url("../Assets/fondoimagen1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.form
+{
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    padding: 50px 0 ; 
+}
+
+.container
+{
+    width: 90%;
+    background-color:#fff ;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 5, 0.8);
+    margin-top: 90px;
+    border-radius: 15px;
+    align-items: center;
+    padding: 30px;
+    
+
+}
+
+.form__contac
+{
+    width: 85%;
+    display: flex ;
+    flex-direction: column;
+    margin: auto;
+    gap: 1rem;
+}
+
+.contac__title
+{
+    color: #054f6e;
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+.contac__subtitle
+{
+    color: rgb(106, 106, 107);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: .3em;
+
+}
+
+.form__input
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: .8rem 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #ced1d6;
+    border-radius: .3rem;
+
+}
+
+.form__input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+
+}
+
+.form__btn
+{
+    font-family: 'Oxygen', sans-serif;
+    background-color: #14a1dd;
+    color: #fff;
+    border: none;
+    font-size: 300;
+    padding: .7em 0;
+    border-radius: .5em;
+    cursor: pointer;
+    font-size: 1.1rem;
+
+}
+
+@media screen and (max-width:800px)
+{
+    
+.form
+{
+    max-width: 350px;
+}
+
+.container
+{
+    width: 90%;
+
+}
+   
+.form__contac
+{
+    width: 80%;
+}
+
+
+}
+
+
+@media screen and (max-width:450px)
+{
+
+        
+.form
+{
+    max-width: 350px;
+}
+
+.container
+{
+    width: 90%;
+
+}
+   
+.form__contac
+{
+    width: 80%;
+}
+
+
+.contac__title
+{
+
+    font-size: 1.3rem;
+
+}
+.contac__subtitle
+{
+    color: rgb(106, 106, 107);
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: .3em;
+
+}
+
+.form__input
+{
+    font-size: 1rem;
+}
+
+}

@@ -633,6 +633,10 @@ h3{
 
 @media screen and (max-width:480px)
 {
+    .head
+{
+    height: 80%;
+}
     .titulo
     {
         font-size: 30px;
@@ -689,6 +693,8 @@ h3{
 
 }
 
+
+/* 
 @media only screen 
     and (device-width : 414px) 
     and (device-height : 736px) 
@@ -747,4 +753,4 @@ h3{
         text-align: center;
         font-size: 14px;
     }
-}
+} */

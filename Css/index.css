@@ -630,8 +630,9 @@ h3{
 
   
 }
-/* 
-@media screen and (max-width:480px)
+
+
+@media screen and (max-width:400px)
 {
     .titulo
     {
@@ -687,69 +688,6 @@ h3{
     font-size: 14px;
 }
 
-} */
-
-
-
-@media only screen 
-    and (device-width : 414px) 
-    and (device-height : 736px) 
-    and (-webkit-device-pixel-ratio : 3)
-    {
-        .head{
-            height: 80%;
-        }
-        .titulo
-        {
-            font-size: 30px;
-        }
-        .nav__items
-        {
-            width: 55vw;
-        }
-        .wp
-        {
-            top: 20px;
-            right: 20px;
-        }
-        .subtitulo
-        {
-            font-size: 24px;
-        }
-        .social-media
-        {
-            width: 100%;
-            text-align: center;
-        }
-        .footer-us
-        {
-            width: 90%;
-        }
-    
-        .contenedor--botones
-        {
-            width: 30%;
-        }
-    .img--galey
-    {
-        width: 70%;
-        margin-bottom: 15px;
-        height: 220px;
-        overflow: hidden;
-    }
-    
-    .biografia__parrafo
-    {
-    
-        font-size: 18px;
-    }
-    
-    .hover--galery
-    {
-         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 14px;
-    }
 } 
+
+

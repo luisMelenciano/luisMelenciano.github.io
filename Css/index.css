@@ -633,10 +633,10 @@ h3{
 
 @media screen and (max-width:480px)
 {
-    .head
-{
-    height: 80%;
-}
+    .header
+    {
+        height: 70vh;
+    }
     .titulo
     {
         font-size: 30px;

@@ -20,10 +20,13 @@ body
 
 .fondo
 {
+    padding: 50px;
     background-image: url("../Assets/fondoimagen1.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
+
 }
 
 .contenedor

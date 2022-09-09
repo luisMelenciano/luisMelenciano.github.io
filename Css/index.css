@@ -16,7 +16,7 @@
 body
 {
     font-family: 'Poppins', sans-serif;
-    background-image: url("../Assets/fondoimagen1.jpg");
+    background-image: url("../Assets/fondoimagen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -634,6 +634,11 @@ h3{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
 {
+    body
+    {
+        background-attachment: scroll;
+
+    }
     .titulo
     {
         font-size: 28px;

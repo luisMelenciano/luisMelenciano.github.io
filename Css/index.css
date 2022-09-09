@@ -636,7 +636,7 @@ h3{
 {
     body
     {
-        background-attachment: scroll;
+        background-attachment: initial;
 
     }
     .titulo

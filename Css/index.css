@@ -15,12 +15,15 @@
 
 body
 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;  
+}
+
+.fondo
+{
     background-image: url("../Assets/fondoimagen1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  
 }
 
 .contenedor

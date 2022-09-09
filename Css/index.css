@@ -98,7 +98,6 @@ body
     background-image: url("../Assets/fondoimagen1.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     display: flex;
     flex-direction: column;

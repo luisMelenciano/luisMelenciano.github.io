@@ -17,13 +17,21 @@ body
 {
     font-family: 'Poppins', sans-serif;  
     background-image: url("../Assets/fondoimagen.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-    z-index: 50;
 }
-
+/* 
+.fondo
+{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-image: url("../Assets/fondoimagen.jpg");
+    background-attachment: fixed;
+} */
 
 .contenedor
 {

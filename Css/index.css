@@ -420,10 +420,9 @@ body
 
 .slide-img{
     width: 100%;
-    height: 350px;
+    height: 280px;
     margin-bottom: 50px;
 }
-
 
 .slide-text {
     display: flex;
@@ -476,8 +475,8 @@ body
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    margin: auto;
+    width: 80%;
+    margin: 10px auto;
 }
 
 

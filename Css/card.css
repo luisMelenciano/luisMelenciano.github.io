@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,300;1,200;1,400 & family= Open+Sans:wght@300;400;500;700 & family= Oxygen:wght@300;400;700 & family= Poppins:ital,wght@0,200;0,300;0,400;0,700;1,300;1,700 & display=swap');
+
+*
+{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+:root
+{
+    
+ --Soft-blue: hsl(215, 51%, 70%);
+ --Cyan: hsl(178, 100%, 50%);
+
+
+--Very-dark-blue0: hsl(217, 54%, 11%);
+ --Very-dark-blue1: hsl(216, 50%, 16%);
+--Very-dark-blue2 : hsl(215, 32%, 27%);
+ --White: hsl(0, 0%, 100%);
+    
+}
+
+body
+{
+    background-color: var(--Very-dark-blue0);
+    font-size: 14px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+    width: 300px;
+    height: 500px;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--Very-dark-blue1);
+}
+
+.card
+{
+    background-color: var(--Very-dark-blue2);
+    border-radius: 20px;
+    height: 450px;
+
+}
+
+.image
+{
+    width: 260px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px; 
+    display: flex;
+
+}
+
+.card--container
+{
+    margin: 10px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.card--container p
+{
+    margin: 10px;
+
+}
+
+.line
+{
+    border-top: 1px solid var(--White);
+    height: 1px;
+    max-width: 240px;
+    padding: 0;
+    margin: 10px auto 0 auto;
+
+}
+
+.card__tilte
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+.card__tilte:hover
+{
+    color: var(--Cyan);
+}
+.card__subtilte
+{
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--White);
+
+}
+
+.sub-card
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.sub-card-title
+{
+    color: var(--Cyan);
+}
+.card--foorter
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.card--foorter span:hover
+{
+    color:var(--Cyan);
+}
+
+.image--footer
+{
+    width: 50px;
+}
+
+@media screen and (max-width:375px) {
+
+    body
+    {
+        background-color: aqua;
+    }
+    
+}
+
+
+
+.hover--galery
+{
+    position: absolute;
+    width: 249px;
+    height: 250px;
+    transform: scale(0); 
+    background-color: var(--Cyan);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 14px;
+    top: 25px;
+    border-radius:15px ;
+}
+
+.hover--galery img 
+{
+    width: 30%;
+}
+
+.card__image:hover .hover--galery
+{
+    transform: scale(1);
+}

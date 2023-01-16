@@ -120,8 +120,11 @@ color: var(--morado);
     border-radius:15px ;
 }
 .header--imagen img{
-    width: 100%;
+    width: 90%;
 }
+
+
+/*Fisrt section*/
 
 .fisrt-section{
     display: flex;

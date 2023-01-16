@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+     --blue:#AADDDE;
+     --blue--higt: hsl(208, 95%, 44%);
+     --morado:  #7165B8 ;
+     --morado-claro:#7C6FCC ;
+     --gris-claro: #EDECE8 ;
+     --green:#B4CA20;
+     --gris:#939892;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+    width: 90%;
+    max-width: 1400px;
+    overflow: hidden;
+    margin: auto;
+    padding: 40px 0;
+}
+
+
+.container--header{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.header--title{
+font-size: 40px;
+color: var(--morado);
+}
+.nav{
+    display: flex;
+    gap: 30px;
+}
+.nav--label , .nav--inpunt{
+    display: none;
+}
+.nav--label{
+    z-index: 3;
+    position: fixed;
+    right: 50px;
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 20%;
+    box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
+    
+}
+.nav a{
+    text-decoration: none;
+    color: var(--morado);
+    font-weight: 300;
+    font-size: 20px;
+}
+.nav--btn{
+    position: relative;
+    display: inline-block;
+}
+.nav--btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gris);
+    border-radius: 4px;
+    scale: 0.1;
+    transform-origin: right;
+    transition: scale 0.25s;
+}
+.nav--btn:hover::before{
+    scale: 1;
+    transform-origin: left;
+}
+
+.header--texts{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: var(--gris-claro);
+    padding: 20px;
+    border-radius: 10px;
+    height: 550px;
+}
+.header--texts h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+.header--texts h2 span{
+    color: var(--morado);
+}
+.header--texts p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.header--texts a{
+    display: block;
+    background-color: var(--morado-claro);
+    padding: 15px 10px;
+    width: 150px;
+    margin:20px auto;
+    text-decoration: none;
+    color: #fff;
+    border-radius:15px ;
+}
+.header--imagen img{
+    width: 100%;
+}
+
+.fisrt-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 500;
+    
+}
+.line{
+    border-top: 3px solid var(--morado);
+    height: 3px;
+    max-width: 60px;
+    padding: 10px 0;
+    margin: 10px auto 0 auto;
+}
+.subtitlte{
+    width: 50%;
+    text-align: center;
+    color: var(--gris);
+}
+
+.container--fisrt{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container--fisrt h2{
+    font-size: 25px;
+    color: var(--morado);
+}
+
+.container--fisrt p{
+    font-size: 16px;
+    color: var(--gris);
+}
+
+
+
+/*Second Section*/
+.second--section{
+    margin: 80px ;
+}
+
+.second--container{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.image{
+    width: 600px;
+    height: 400px;
+    margin: auto 20px; 
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.29);
+    object-fit: cover;
+}
+
+.image--second{
+    position: relative;
+    bottom: 35px;
+}
+
+.image--second::before{
+    content: "Luis Antonio";
+    background-color:#fff ;
+    position: absolute;
+    width: 180px;
+    height: 80px;
+    bottom: 0;
+    left: 5px;
+    box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
+    border-radius: 15px;
+    text-align: left;
+    padding: 0 10px;
+    color: var(--morado);
+}
+.second--text{
+    margin: 0 20px;
+    text-align: start;
+}
+
+.second--text h2{
+    color: var(--morado);
+    font-size: 20px;
+}
+
+.second--text h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.second--text p{
+    font-size: 16px;
+    color: var(--gris);
+}
+
+
+/*Third section*/
+.trird--title{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+.container--tree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+.box--tree{
+    width: 25%;
+    background-color: #fff;
+    margin: 30px 30px;
+    padding: 10px 20px;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.29);
+    border-radius: 5px;
+}
+
+.box--tree img{
+    width: 70px;
+    background-color: var(--morado);
+    
+}
+
+.fondo{
+    background-color: var(--morado-claro);
+    width: 190px;
+    height: 70px;
+    border-radius: 10px;
+}
+.box--tree h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box--tree p{
+    color: var(--gris);
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: left;
+
+}
+
+.box--tree a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--morado);
+    margin: 15px 0;
+}
+
+.box--tree a i{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*Four section*/
+
+.four--container{
+    display: flex;
+    margin: 20px 0;
+}
+
+.four--image{
+    width: 350px;
+    margin: auto;
+}
+.four--image img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow:
+    11px 20px 0px rgba(0, 0, 0, 0.34);
+    object-fit: cover;
+
+}
+.four--text{
+    display: flex;
+    flex-direction: column;
+    margin: auto 10px;
+}
+.four--text h2{
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: left;
+}
+
+.for--article{
+    display:flex;
+}
+.article--image{
+    background-color: var(--morado);
+    width: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.article--image img{
+    width: 40px;
+}
+
+.article--text{
+    margin: 15px 0;  
+}
+
+.article--text h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.article--text p{
+    font-size: 16px;
+    color: var(--gris);
+}
+
+
+/*Five Section*/
+.five--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.five--title{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.five--box{
+    width: 30%;
+    margin: 30px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+   
+
+
+}
+.five--image{
+    width: 100%;
+    
+}
+.five--image img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  
+}
+.five--text{
+   padding: 10px 20px;
+}
+.five--text h3{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.five--text p{
+    font-size: 18px;
+    color: var(--morado-claro);
+    margin: 10px 0;
+}
+
+.five--text p span{
+    color: var(--blue--higt);
+    font-size: 25px;
+}
+.five--text h5{
+    font-size: 14px;
+    color: var(--gris);
+    margin: 10px 0;
+}
+.five--text a{
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    border: 2px solid var(--blue--higt);
+    text-align: center;
+    border-radius: 15px;
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 10px 20px;
+}
+.btn--five{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px auto;
+    width: 160px;
+    background-color: var(--blue--higt);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in;
+
+}
+.btn--five:hover{
+    background-color: var(--morado);
+}
+
+.five--box:hover{
+    transform: scale(1.1);
+}
+
+
+
+/*Six section*/
+.six--title {
+    text-align: left;
+    font-size: 30px;
+}
+
+.six--subtitle {
+    text-align: left;
+    font-size: 16px;
+    width: 45%;
+    color: var(--gris);
+    margin: 20px 0;  
+}
+
+
+.six--box{
+    margin:40px 20px ;
+    padding: 0 20px;
+    box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
+    border-radius: 20px;
+    width: 500px;
+    
+}
+
+.six--box__image{
+    height: 100px;
+}
+.six--box__image img{
+    width: 200px;
+    position: relative;
+    display: flex;
+    bottom: 60px;
+    margin: auto;  
+}
+
+.six--box__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.six--box__title h2{
+    color: var(--morado);
+}
+.six--box__title img{
+    width: 120px;
+}
+.six--box__subtitle{
+    text-align: left;
+    color: var(--gris);
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.six--box__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.six--box__footer a{
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+    background-color: var(--blue--higt);
+    width: 150px;
+    padding: 15px 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/*Seven Section*/
+.seven--section{
+    background-color: var(--gris-claro);
+    margin: 50px 0;
+    
+}
+
+.seven--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.seven--titles{
+    width: 40%;
+}
+.seven--titles h2{
+    color: var(--morado);
+    font-size: 30px;
+}
+
+.seven--titles p{
+    color: var(--gris);
+    font-size: 14px;
+    text-align: left;
+    margin: 10px 0;
+}
+.seven--subtile .input{
+    padding: 10px 30px;
+    color: var(--morado);
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+
+
+}
+.seven--btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--morado);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/*Footer Container*/
+.footer--container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer--logo{
+    width: 30%;
+    margin: 20px 0;
+}
+.footer__title{
+    color: var(--morado);
+    font-size: 25px;
+    
+}
+.footer___subtitle {
+    font-size: 16px;
+    text-align: left;
+    color: var(--gris);
+    margin: 10px 0;
+}
+
+.footer--about{
+    margin: 20px 0;
+}
+.footer--contact{
+    margin: 20px 0;
+}
+
+
+
+@media (max-width:700px) {
+    .nav--label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav a{
+        font-size: 26px;
+        margin: 20px 0;
+    }
+    .nav{
+        position: fixed;
+        top: 30px;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 2;
+        left: 160px;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+       justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path 400ms ease-in-out;
+        border: 1px solid black;
+       
+        
+    }
+    .nav--inpunt:checked + .nav{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header--texts{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px;
+      
+    }
+    .header--texts h2{
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+    
+    }
+    .header--texts p{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .container--fisrt{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .container--fisrt h2{
+        font-size: 25px;
+        color: var(--morado);
+    }
+    
+    .container--fisrt p{
+        font-size: 18px;
+       
+    }
+    .second--container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 40px;
+    }
+    
+    .image{
+        width: 350px;
+        height: 400px;
+        margin: 20px 0;
+    }
+    .image--second{
+        position: relative;
+        bottom: 0;
+    }
+    
+.second--text{
+    margin: 0;
+    text-align: center;
+}
+
+.second--text p{
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*Third section*/
+
+.container--tree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.box--tree{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.box--tree img{
+    width: 80px;  
+    margin:10px auto;
+}
+
+
+.box--tree p{
+    color: var(--gris);
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: center;
+
+}
+
+/*Four section*/
+.four--container{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px 0;
+}
+.four--image img{
+    margin: 40px 0;
+}
+.four--text{
+    display: flex;
+    margin: auto 10px;
+}
+.four--text h2{
+    text-align: center;
+}
+
+.article--image{
+    background-color: var(--morado);
+    width: 100px;
+   
+}
+.article--image img{
+    width: 50px;
+}
+
+.article--text{
+    margin: 10px 0;  
+}
+
+
+/*Five Section*/
+.five--container{
+flex-direction: column;
+   
+
+}
+
+.five--title{
+    text-align: center;
+    font-size: 34px;
+    margin-top: 20px;
+}
+
+.five--box{
+    width: 80%;
+    text-align: center;
+}
+
+
+.five--text a{
+    margin: 15px auto;
+}
+
+/*Six section*/
+
+.six--title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.six--subtitle {
+    text-align: center;
+    width: 80%;
+    margin: auto;  
+}
+
+
+.six--box{
+    margin:40px 20px ;
+    width: 300px;
+}
+
+.six--box__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.six--box__title h2{
+    font-size: 20px;
+}
+.six--box__title img{
+    width: 100px;
+}
+.six--box__subtitle{
+    text-align: center;
+    color: var(--gris);
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.six--box__footer a{
+    width: 160px;
+}
+
+
+/*Seven Section*/
+
+
+.seven--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.seven--titles{
+    width: 90%;
+}
+.seven--titles h2{
+    font-size: 28px;
+    text-align: center;
+}
+
+.seven--titles p{
+    color: var(--gris);
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+}
+.seven--subtile{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.seven--btn{
+    margin:10px auto;
+}
+
+/**/
+.footer--container{ 
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.footer--logo{
+    width: 90%;
+    margin: 20px 0;
+}
+.footer__title{
+    color: var(--morado);
+    font-size: 30px;
+    text-align: center;
+  
+    
+}
+.footer___subtitle {
+    font-size: 17px;
+  text-align: center;
+
+}
+}

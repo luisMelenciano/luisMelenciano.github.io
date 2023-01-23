@@ -29,14 +29,15 @@ shoesContainer.addEventListener('click', e =>{
   
 
 const products = [
-    {id:"1", nombre:"Jordan 4 mectalic Purple", precio: "400", image:"/assets/jordan4.jpg"},
-    {id:"2", nombre:"Jordan 1 hight blue", precio:"250", image:"/assets/jordan1.jpg"},
-    {id:"3", nombre:"Jordan 10 Retro", precio:" 150", image:"/assets/jordan10.jpg"},
-    {id:"4",nombre:"Nike Air force 1", precio:" 100", image:"/assets/nike1.jpg"},
+    {id:"1", nombre:"Jordan 4 mectalic Purple", precio: "400", image:"/Assets/jordan4.jpg"},
+    {id:"2", nombre:"Jordan 1 hight blue", precio:"250", image:"/Assets/jordan1.jpg"},
+    {id:"3", nombre:"Jordan 10 Retro", precio:" 150", image:"/Assets/jordan10.jpg"},
+    {id:"4",nombre:"Nike Air force 1", precio:" 100", image:"/Assets/nike1.jpg"},
     {id:"5", nombre:"UnderArmour Curry MVP 2016", precio:" 500", image:"/assets/currymvp.jpg"},
-    {id:"6", nombre:"Vans old Skool", precio:"200", image:"/assets/vans.jpg"},
-    {id:"7", nombre:"Adidas SuperStar", precio:"90", image:"/assets/adidasSuperstar.jpg"},
-    {id:"8", nombre:"Jordan 1 Air Dior", precio:"1000", image:"/assets/jordanDior.jpg"},
+    {id:"6", nombre:"Vans old Skool", precio:"200", image:"/Assets/vans.jpg"},
+    {id:"7", nombre:"Adidas SuperStar", precio:"90", image:"/Assets/adidasSuperstar.jpg"},
+    {id:"8", nombre:"Jordan 1 Air Dior", precio:"1000", image:"/Assets/jordanDior.jpg"},
+    {id:"9", nombre:"Crocks", precio:"340", image:"/Assets/crocks.jpg"},
 ];
 
 

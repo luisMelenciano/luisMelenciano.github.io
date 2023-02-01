@@ -58,6 +58,13 @@
     align-items: center;
     justify-content: center;
 }
+.nav-cart-total{
+    position: relative;
+    bottom: 12px;
+    right: 4px;
+    font-size: 18px;
+    color: #3B7197;
+}
 .nav-cart-img{
     width: 60px;
 }

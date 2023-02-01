@@ -7,38 +7,51 @@ const totalCart = document.querySelector('.table-total ');
 const totalCartcant = document.querySelector('.table-cantidad');
 const wp = document.querySelector('.nav-cart-img');
 const btnClear = document.querySelector('.vaciar-carrito');
+const cantCart = document.querySelector('.nav-cart-total');
 
 let cart= [];
 
-tablebody.addEventListener('click', e =>{
-  btnAccion(e);
-})
 
+
+tablebody.addEventListener('click', e =>{
+   btnAccion(e);
+  //console.log(e.target);
+});
 wp.addEventListener('click' , ()=>{
     cartContainer.classList.toggle("show")
-})
+});
   
 btnClear.addEventListener('click', ()=>{
     cart = [];
     ClearCart();
 });
-
 shoesContainer.addEventListener('click', e =>{
     addtocCart(e);
 });
   
+document.addEventListener('DOMContentLoaded', ()=>{
+    createProducts(products);
+    if(localStorage.getItem('carrito')){
+        cart  = JSON.parse(localStorage.getItem('carrito')) || [];
+        createTable();
+        
+    }
+    
+});
 
 const products = [
-    {id:"1", nombre:"Jordan 4 mectalic Purple", precio: "400", image:"/Assets/jordan4.jpg"},
-    {id:"2", nombre:"Jordan 1 hight blue", precio:"250", image:"/Assets/jordan1.jpg"},
-    {id:"3", nombre:"Jordan 10 Retro", precio:" 150", image:"/Assets/jordan10.jpg"},
-    {id:"4",nombre:"Nike Air force 1", precio:" 100", image:"/Assets/nike1.jpg"},
+    {id:"1", nombre:"Jordan 4 mectalic Purple", precio: "400", image:"/assets/jordan4.jpg"},
+    {id:"2", nombre:"Jordan 1 hight blue", precio:"250", image:"/assets/jordan1.jpg"},
+    {id:"3", nombre:"Jordan 10 Retro", precio:" 150", image:"/assets/jordan10.jpg"},
+    {id:"4",nombre:"Nike Air force 1", precio:" 100", image:"/assets/nike1.jpg"},
     {id:"5", nombre:"UnderArmour Curry MVP 2016", precio:" 500", image:"/assets/currymvp.jpg"},
-    {id:"6", nombre:"Vans old Skool", precio:"200", image:"/Assets/vans.jpg"},
-    {id:"7", nombre:"Adidas SuperStar", precio:"90", image:"/Assets/adidasSuperstar.jpg"},
-    {id:"8", nombre:"Jordan 1 Air Dior", precio:"1000", image:"/Assets/jordanDior.jpg"},
-    {id:"9", nombre:"Crocks", precio:"340", image:"/Assets/crocks.jpg"},
+    {id:"6", nombre:"Vans old Skool", precio:"200", image:"/assets/vans.jpg"},
+    {id:"7", nombre:"Adidas SuperStar", precio:"90", image:"/assets/adidasSuperstar.jpg"},
+    {id:"8", nombre:"Jordan 1 Air Dior", precio:"1000", image:"/assets/jordanDior.jpg"}
 ];
+
+
+
 
 
 
@@ -67,30 +80,36 @@ function createProducts(products){
 
 function createTable(){
     tablebody.innerHTML= '';
-    cart.forEach(element =>{
+     cart.forEach(element => {
         let Total = element.cantidad * element.precio;
+        //const {image,name,precio,cantidad,id} = element;
         tablebody.innerHTML += `
-        
         <tr>
             <td><img src="${element.image}" class="img-table" alt=""></td>
             <td>${element.name}</td>
             <td>US$ ${element.precio}</td>
-            <td>${element.cantidad}</td>
+            <td>${ element.cantidad}</td>
             <td>$ ${Total}</td>
             <td>
                 <button class="table-btn btn-mas" data-id="${element.id}">+</button>
                 <button  class="table-btn btn-menos" data-id="${element.id}">-</button>
             </td>
          </tr>
-     
     `    
-      
     });
+   
     cal();
+    localStorage.setItem('carrito' , JSON.stringify(cart));  
+    cantCart.textContent = cart.length;
+    ClearCart();
+
+    
+    
+   
 }
 
 function cal(){
-    const ncantidad = cart.reduce((acc,{cantidad})=> acc + cantidad,0);
+    const ncantidad = cart.reduce((acc,{cantidad})=> acc + cantidad ,0);
     const ntotal = cart.reduce((acc,{cantidad, precio})=> acc + cantidad * precio,0);
     totalCartcant.textContent = ncantidad;
     totalCart.textContent = ntotal;
@@ -100,7 +119,6 @@ function addtocCart(e){
     if(e.target.classList.contains("shoes-box-btn")){
         setCarrito(e.target.parentElement.parentElement);
     }
-    e.stopPropagation();
 }
 
 function setCarrito(objeto){
@@ -111,16 +129,36 @@ function setCarrito(objeto){
         name: objeto.querySelector('.shoes-box-title').textContent,
         precio: objeto.querySelector('.box-shoes-price').textContent,
         cantidad:1,
-        total: objeto.querySelector('.box-shoes-price').textContent
+        total: 0
     }
 
-    if(cart.hasOwnProperty(products.id)){
+    const existe = cart.some(pro => pro.id === products.id);
+    if (existe) {
+        const article = cart.map(pro =>{
+            if (pro.id === products.id) {
+                pro.cantidad ++;
+                return pro;
+            }else{
+                return pro;
+            }
+        });
+        cart = [...article];
+        createTable();
+        
+    }else{
+        cart = [...cart, products]
+        createTable(cart); 
+    }
+
+   
+  
+    //cart = {...cart, products};
+    /*if(cart.hasOwnProperty(products.id)){
         products.cantidad= cart[products.id].cantidad + 1;
         //products.total = products.total * products.cantidad;
-    }
-    cart[products.id] = {...products}
-    createTable();
-   // console.log(cart);
+    }*/
+   
+   
 }
 
 function ClearCart(){
@@ -135,31 +173,67 @@ function ClearCart(){
 }
 }
 
-
 function btnAccion(e){
     if(e.target.classList.contains('btn-mas')){
-        //console.log(cart[e.target.dataset.id]);
-        const products = cart[e.target.dataset.id];
-        products.cantidad ++;
-        cart[e.target.dataset.id] = {...products};
-        createTable();
+        const id = e.target.dataset.id;
+        const products = cart.some(pro => pro.id === id)
+        if(products){
+            const pro = cart.map(cant=> {
+                if(cant.id === id){
+                    cant.cantidad++;  
+                    return cant;   
 
+                }
+                              
+            })
+            cart[pro.id] = [...pro]
+            createTable();
+        }
+      
+        
     }
     if(e.target.classList.contains('btn-menos')){
-        const products = cart[e.target.dataset.id];
-        products.cantidad --;
-        createTable();
-        if(products.cantidad === 0){
-            delete cart[e.target.dataset.id];
+        const id = e.target.dataset.id;
+        const products = cart.some(pro => pro.id === id)
+        if(products){
+            const pro = cart.map(cant=> {
+                if(cant.id === id){
+                    cant.cantidad--;  
+                     
+
+                    if(cant.cantidad === 0){
+                        const Cart = cart.filter(cart => cart.id !==id)
+                        cart = [...Cart]
+                        createTable();
+                        ClearCart();
+                        return;
+                    }
+                    return cant; 
+                }                 
+            })
+            cart[pro.id] = [...pro]
+            createTable();
         }
-        createTable();
-        ClearCart();
-
     }
-    //e.stopPropagation();
-
+    e.stopPropagation();
 }
 
 
-createProducts(products);
 ClearCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

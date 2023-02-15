@@ -397,8 +397,8 @@ body
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 650px;
+    width: 300px;
+    height: 450px;
     background-color: #fff;
     box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
     border-radius: 20px;
@@ -406,8 +406,8 @@ body
 
 .slide-img{
     width: 90%;
-    height: 290px;
-    margin: 50px auto;
+    height: 150px;
+    margin:  auto;
 }
 
 .slide-text {
@@ -416,9 +416,9 @@ body
     margin: auto;
     justify-content: center;
     align-items: center;
-   background-color: rgb(255, 255, 255);
-   height: 200px;
-   padding: 15px 0;
+     background-color: rgb(255, 255, 255);
+    height: 200px;
+    padding: 15px 0;
  
 
 }
@@ -461,7 +461,7 @@ body
 
 .swiper-slide img {
     display: block;
-    width: 80%;
+    width: 70%;
     margin: 10px auto;
 }
 

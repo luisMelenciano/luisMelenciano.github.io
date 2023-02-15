@@ -417,7 +417,7 @@ body
     justify-content: center;
     align-items: center;
      background-color: rgb(255, 255, 255);
-    height: 200px;
+    height: 190px;
     padding: 15px 0;
  
 
@@ -425,44 +425,44 @@ body
 .line-slide{
     border-top: 1px solid rgb(215, 218, 219);
     height: 1px;
-    max-width: 350px;
+    max-width: 300px;
     padding:10px 0;
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 .slide-text a{
     display: block;
     text-align: center;
     align-items: center;
     text-decoration: none;
-    width: 180px;
+    width: 160px;
     height: 50px;
     padding: 10px 10px;
     background-color: #3a73f0;
     color: #fff;
     margin: auto;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
 
 }
 
 .slide-text h3{
     color: rgb(55, 61, 63);
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     font-weight: 700;
 }
 .slide-text p{
     color: #3a73f0;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     width: 70%;
 }
 
 .swiper-slide img {
     display: block;
-    width: 70%;
-    margin: 10px auto;
+    width: 80%;
+    margin: 20px auto;
 }
 
 

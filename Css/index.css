@@ -860,10 +860,14 @@ h3{
 }
 
 .slide-img{
-    width: 80%;
-    height: 200px;
-    margin-bottom: 50px;
-    margin: auto;
+    width: 100%;
+    height: 220px;
+}
+.slide-img img {
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+ 
 }
 
 
@@ -916,12 +920,7 @@ h3{
     width: 80%;
 }
 
-.slide-img img {
-    display: block;
-    width: 90%;
-    margin: auto;
- 
-}
+
 } 
 
 

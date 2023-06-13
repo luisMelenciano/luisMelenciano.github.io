@@ -25,7 +25,7 @@ function Generar(){
             <div class="slide-text">
                  <h3>${element.title}</h3>
                  <p>${element.subtitle}</p>
-                 <a href="${element.link}" target="_blank" rel="noopener noreferrer" >See preview</a>
+                 <a href="${element.link}" target="_blank" rel="noopener noreferrer" >Visitar</a>
             </div>
        </div> 
         

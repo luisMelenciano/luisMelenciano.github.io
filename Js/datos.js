@@ -9,7 +9,8 @@ const portafolio = [
      {id:"5",imagen:"Assets/shoes.png",title:"E-commerce",subtitle:"This is an E-commerce of a shoe store",link:"https://astounding-baklava-7e1866.netlify.app/"},
      {id:"6",imagen:"/Assets/wheaterappp.png",title:"Wheater App",subtitle:"Consumiendo 2 Api diferentes del clima.",link:"https://profound-chaja-26f5f7.netlify.app/"},
      {id:"7",imagen: "Assets/tic.png",title:"Tic Tac Toe",subtitle:"El famoso Tic Tac Toe realizado con React.",link:"https://resplendent-sunburst-b7a597.netlify.app/"},
-     {id:"8",imagen:"Assets/movilm.png",title:"MovieLM ",subtitle:"Sitio web de peliculas, consumiendo la API de TheMovieDB con React.JS.",link:"https://themovielm.netlify.app/"}
+     {id:"8",imagen:"Assets/movilm.png",title:"MovieLM ",subtitle:"Sitio web de peliculas, consumiendo la API de TheMovieDB con React.JS.",link:"https://themovielm.netlify.app/"},
+     {id:"9",imagen:"Assets/hodiee.png",title:"Hodiee ",subtitle:"Mi propia red social realizada con React.JS, seguidores, publicaciones, perfiles.etc",link:"https://hodiee.netlify.app/"}
 
 ]
 

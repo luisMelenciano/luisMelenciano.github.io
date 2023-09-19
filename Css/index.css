@@ -398,7 +398,7 @@ body
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 450px;
+    height: auto;
     background-color: #fff;
     box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
     border-radius: 20px;
@@ -856,7 +856,7 @@ h3{
     background-position: center;
     background-size: cover;
     width: 230px;
-    height: 500px;
+    height: auto;
     background-color: #fff;
     box-shadow: 0 0 6px rgba(39, 38, 38, 0.884);
     border-radius: 20px;
